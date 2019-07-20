@@ -43,9 +43,7 @@ class _01_SwappingDigits {
 	public static void sortIntArray(int[] arr) {
 		for (int i = 1; i < arr.length; i++) {
 			for (int j = 0; j < arr.length; j++) {
-				if (arr[i] > arr[j]) {
-					continue;
-				} else {
+				if (arr[i] < arr[j]) {
 					int arr0 = arr[i];
 					int arr1 = arr[j];
 					arr[i] = arr1;
@@ -61,9 +59,7 @@ class _01_SwappingDigits {
 	public static int findMiddle(int[] arr) {
 		for (int i = 1; i < arr.length; i++) {
 			for (int j = 0; j < arr.length; j++) {
-				if (arr[i] > arr[j]) {
-					continue;
-				} else {
+				if (arr[i] < arr[j]) {
 					int arr0 = arr[i];
 					int arr1 = arr[j];
 					arr[i] = arr1;
