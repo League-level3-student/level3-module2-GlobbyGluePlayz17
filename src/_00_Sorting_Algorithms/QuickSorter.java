@@ -12,7 +12,6 @@ public class QuickSorter extends Sorter {
 	//   progress on the graph.
 	@Override
 	void sort(int[] array, SortingVisualizer display) {
-		display.updateDisplay();
 		//10. call the quickSort method with 0 and the length of the array minus one
 		quickSort(array, 0, array.length-1, display);
 		display.updateDisplay();
@@ -27,17 +26,16 @@ public class QuickSorter extends Sorter {
         //   in the array that is the halfway point between low and high
        int pivot = array[(low+high)/2];
         //4. make a while loop that goes while i is less than or equal to j
-        while (i <= j) {
+       while (i <= j) {
         	//5. make a while loop that increments i while 
         	//   the array element at i is less than pivot
             while (array[i] < pivot) {
-                display.updateDisplay();
 				i++;
 			}
             //6. make a while loop that decrements j while 
         	//   the array element at j is greater than pivot
             while (array[j] > pivot) {
-				j--;
+				j-=1;
 			}
             //7. if i is less than or equal to j, 
             //   swap the array elements at i and j.
