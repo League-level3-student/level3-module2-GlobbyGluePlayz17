@@ -41,13 +41,14 @@ public class QuickSorter extends Sorter {
             //   swap the array elements at i and j.
             //   In the same if-statement, increase i by 1 
             //   and decrease j by 1.
-            if (i >= j) {
+            if (i <= j) {
 				int value = array[i];
 				array[i] = array[j];
 				array[j] = value;
 				i++;
 				j--;
 			}
+            display.updateDisplay();
         }
         //8. if low is less than j, call the quickSort method using
         //   low for the low and j for the high

@@ -33,7 +33,7 @@ public class MergeSorter extends Sorter {
             //6. copy the elements from the array into the temporary array,
             //   but only the elements from low to high inclusive
             for (int i = low; i <= high; i++) {
-				array[i] = temporary[i];
+				temporary[i] = array[i];
 			}
             //7. create three integers called i, j, and k and
             //   set them equal to low, middle + 1, and low respectively
@@ -59,7 +59,7 @@ public class MergeSorter extends Sorter {
                     //15. increase j by 1
             		j++;
             		display.updateDisplay();
-            }
+            	}
                 //16. increase k by 1
                 k++;
                 display.updateDisplay();

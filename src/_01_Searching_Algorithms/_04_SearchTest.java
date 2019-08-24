@@ -26,8 +26,17 @@ class _04_SearchTest {
 	public void testBinarySearch() {
 		//2. use the assertEquals method to test your binary search method.
 		//   remember that the array must be sorted
-		int[] numbers = {1, 2, 3, 4, 9, 9};
-		assertEquals(9, _01_BinarySearch.binarySearch(numbers, 0, numbers.length-1, 9));
+		int[] numbers = {1, 2, 3, 3, 4, 9, 9};
+		assertEquals(2, 3, _01_BinarySearch.binarySearch(numbers, 0, numbers.length-1, 3));
+		
+		int[] a = {37859, 283755, 293865134, 439857, 92038, 9128975, 0, -19864, 100000, 3};
+		assertEquals(-1, _01_BinarySearch.binarySearch(numbers, 0, numbers.length-1, 6799));
+		
+		int[] b = {0, 283755, 293865134, 439857, 92038, 9128975, 0, -19864, 100000, 3};
+		assertEquals(0, 5, _01_BinarySearch.binarySearch(numbers, 0, numbers.length-1, 0));
+		
+//		int[] r = {37859, 283755, 293865134, 439857, 92038, 9128975, 0, -19864, 100000, 3};
+//		assertEquals(9, _01_BinarySearch.binarySearch(numbers, 0, numbers.length-1, 3));
 		
 	}
 	
@@ -37,6 +46,12 @@ class _04_SearchTest {
 		//   remember that the array must be sorted and evenly distributed
 		int[] values = {1, 3, 5, 7, 3, 8, 2, 8};
 		assertEquals(1, 4, _02_InterpolationSearch.interpolationSearch(values, 3));
+		
+		int[] t = {12, 345, 6789, 10000, -48620};
+		assertEquals(-1, _02_InterpolationSearch.interpolationSearch(values, 3));
+		
+		int[] q = {1, 3, 5, 7, 3, 8, 2, 8};
+		assertEquals(3, _02_InterpolationSearch.interpolationSearch(values, 7));
 	}
 	
 	@Test
@@ -44,6 +59,6 @@ class _04_SearchTest {
 		//4. use the assertEquals method to test your exponential search method.
 		//   remember that the array must be sorted
 		int[] values = {0 ,2, 4, 6, 8, 10};
-		assertEquals(10, _03_ExponentialSearch.exponentialSearch(values, 10));
+		assertEquals(5, _03_ExponentialSearch.exponentialSearch(values, 10));
 	}
 }
