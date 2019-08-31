@@ -13,7 +13,7 @@ public class _00_LinearSearch {
 		for (int i = 0; i < words.length; i++) {
 			if (words[i].contains(value)) {
 				result = i;
-				System.out.println(result);
+				//System.out.println(result);
 			}
 		}
 		return result;

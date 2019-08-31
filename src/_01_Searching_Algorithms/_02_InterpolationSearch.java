@@ -20,12 +20,12 @@ public class _02_InterpolationSearch {
         //   start is less than or equal to end
         //   value is greater than or equal to the array element at start
         //   value is less than or equal to the array element at end
-		while (start <= end && value >= array[start] && value <= array[end]) {
+		while (start <= end && value >= array[start] && value <= array[end]) { 
 			//4. create an integer called position
         	//  initialize it to the following:
         	//  start + (((end - start) / (array[end] - array[start])) * (value - array[start]));
         	//  This calculates the center of the array keeping the even distribution in mind.
-			int position = start + (((end-start) / (array[end] - array[start])) * (value - array[start]));
+			int position = start + (((end - start) / (array[end] - array[start])) * (value - array[start]));
             //5. if the array element at position is equal to the value,
             //   then we found it and can return position.
 			if (array[position] == value) {
@@ -35,11 +35,11 @@ public class _02_InterpolationSearch {
             //6. if the array element at position is less than value,
             //   then set start equal to position plus one
             if (array[position] < value) {
-				start = position++;
+				start = 1 + position;
 			}
             //7. otherwise, set end equal to position minus one
             else {
-            	end = position--;
+            	end = 1 - position;
             }
 		}
         //8. Return -1 because the value was not found

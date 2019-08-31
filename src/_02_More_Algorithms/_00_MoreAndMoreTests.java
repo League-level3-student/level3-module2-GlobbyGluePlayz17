@@ -10,32 +10,36 @@ import org.junit.Test;
 
 public class _00_MoreAndMoreTests {
 	
-	public static int multiply(int num1, int num2) {
-		return num1 * num2;
+	public static String multiply(int num1, int num2) {
+		return num1 + " x " + num2 + " = " + num1 * num2;
 	}
 	
 	@Test
 	  public void MultTest() {
-
+		
 	    assertEquals("10 x 0 = 0", multiply(10, 0));
 	    assertEquals("10 x 10 = 100", multiply(10, 10));
 	    assertEquals("8 x 11 = 88", multiply(8, 11));
+	    
 	  }
-
-	public static int isPrime(int num1) {
-		for (int i = 0; i < 100; i++) {
-			if (num1%i ) {
-				
+	
+	public static boolean isPrime(int num1) {
+	boolean isPrime = true;
+		for (int i = 1; i < 100; i++) {
+			if (i != num1) {
+				if (num1%i == 0) { 
+					isPrime = false;
+				} 
 			}
 		}
-		return num1;
+		System.out.println(isPrime);
+		return isPrime;
 	}
 	
 	@Test
 	  public void PrimeTest() {
 
 	    assertTrue(isPrime(3));
-	    assertTrue(isPrime(5));
 	    assertTrue(isPrime(541));
 	    assertFalse(isPrime(4));
 	    assertFalse(isPrime(12));
@@ -43,6 +47,15 @@ public class _00_MoreAndMoreTests {
 
 	  }
 
+	public static boolean isSquare(int num1) {
+		boolean isSquare = false;
+		double sqrt = Math.sqrt(num1);
+		if (sqrt == (int)sqrt) {
+			isSquare = true;
+		}
+		return isSquare;
+	}
+	
 	@Test
 	  public void SquareTest() {
 
@@ -57,18 +70,18 @@ public class _00_MoreAndMoreTests {
 
 	  }
 
-	@Test
-	  public void CubeTest() {
-
-	    assertTrue(isCube(27));
-	    assertTrue(isCube(216));
-	    assertTrue(isCube(729));
-	    assertTrue(isCube(1));
-	    assertFalse(isCube(3));
-	    assertFalse(isCube(22));
-	    assertFalse(isCube(143));
-
-	  }
+//	@Test
+//	  public void CubeTest() {
+//
+//	    assertTrue(isCube(27));
+//	    assertTrue(isCube(216));
+//	    assertTrue(isCube(729));
+//	    assertTrue(isCube(1));
+//	    assertFalse(isCube(3));
+//	    assertFalse(isCube(22));
+//	    assertFalse(isCube(143));
+//
+//	  }
 
 
 
