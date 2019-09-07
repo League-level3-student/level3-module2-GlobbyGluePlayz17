@@ -70,18 +70,27 @@ public class _00_MoreAndMoreTests {
 
 	  }
 
-//	@Test
-//	  public void CubeTest() {
-//
-//	    assertTrue(isCube(27));
-//	    assertTrue(isCube(216));
-//	    assertTrue(isCube(729));
-//	    assertTrue(isCube(1));
-//	    assertFalse(isCube(3));
-//	    assertFalse(isCube(22));
-//	    assertFalse(isCube(143));
-//
-//	  }
+	public static boolean isCube(int num1) {
+		boolean isCube = false;
+		double crt = Math.cbrt(num1);
+		if (crt == (int)crt) {
+			isCube = true;
+		}
+		return isCube;
+	}
+	
+	@Test
+	  public void CubeTest() {
+
+	    assertTrue(isCube(27));
+	    assertTrue(isCube(216));
+	    assertTrue(isCube(729));
+	    assertTrue(isCube(1));
+	    assertFalse(isCube(3));
+	    assertFalse(isCube(22));
+	    assertFalse(isCube(143));
+
+	  }
 
 
 
