@@ -25,10 +25,11 @@ public class _00_MoreAndMoreTests {
 	
 	public static boolean isPrime(int num1) {
 	boolean isPrime = true;
-		for (int i = 1; i < 100; i++) {
+		for (int i = 2; i < 100; i++) {
 			if (i != num1) {
 				if (num1%i == 0) { 
 					isPrime = false;
+					break;
 				} 
 			}
 		}
